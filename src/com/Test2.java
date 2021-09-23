@@ -7,6 +7,7 @@ public class Test2 {
 	         
 	        String res = fullStr(line);
 	        System.out.println(res);
+		 System.out.println("test local git commit");
 
 	    }
 	 
@@ -39,5 +40,6 @@ public class Test2 {
 	            sb.append(ch2[k]);
 	        } 
 	        return sb.toString();
+
 	    }
 }
