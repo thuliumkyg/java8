@@ -3,25 +3,25 @@ package com.algorithm.nowcoder.string;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class CD97_½«ÕûÊı×Ö·û´®×ª³ÉÕûÊıÖµ {
+public class CD97_å°†æ•´æ•°å­—ç¬¦ä¸²è½¬æˆæ•´æ•°å€¼ {
 	/**
-	 * ÌâÄ¿ÃèÊö
-		¸ø¶¨Ò»¸ö×Ö·û´®str£¬Èç¹ûstr·ûºÏÈÕ³£ÊéĞ´µÄÕûÊıĞÎÊ½£¬²¢ÇÒÊôÓÚ32Î»ÕûÊı·¶Î§£¬·µ»Østr´ú±íµÄÕûÊıÖµ£¬·ñÔò·µ»Ø0¡£
-		ÊäÈëÃèÊö:
-			Êä³ö°üÀ¨Ò»ĞĞ´ú±ístr£¨1 \leq length(str) \leq 100£©£¨1¡Ülength(str)¡Ü100£©¡£
-		Êä³öÃèÊö:
-			Êä³öÒ»ĞĞ£¬´ú±í·µ»ØµÄÖµ¡£
-		Ê¾Àı1
-			ÊäÈë 
-				123
-			Êä³ö 
-				123
-				
-			Ê¾Àı2
-			ÊäÈë 
-				023
-			Êä³ö 
-				0
+	 * é¢˜ç›®æè¿°
+	 ç»™å®šä¸€ä¸ªå­—ç¬¦ä¸²strï¼Œå¦‚æœstrç¬¦åˆæ—¥å¸¸ä¹¦å†™çš„æ•´æ•°å½¢å¼ï¼Œå¹¶ä¸”å±äº32ä½æ•´æ•°èŒƒå›´ï¼Œè¿”å›strä»£è¡¨çš„æ•´æ•°å€¼ï¼Œå¦åˆ™è¿”å›0ã€‚
+	 è¾“å…¥æè¿°:
+	 è¾“å‡ºåŒ…æ‹¬ä¸€è¡Œä»£è¡¨strï¼ˆ1 \leq length(str) \leq 100ï¼‰ï¼ˆ1â‰¤length(str)â‰¤100ï¼‰ã€‚
+	 è¾“å‡ºæè¿°:
+	 è¾“å‡ºä¸€è¡Œï¼Œä»£è¡¨è¿”å›çš„å€¼ã€‚
+	 ç¤ºä¾‹1
+	 è¾“å…¥
+	 123
+	 è¾“å‡º
+	 123
+
+	 ç¤ºä¾‹2
+	 è¾“å…¥
+	 023
+	 è¾“å‡º
+	 0
 	 */
 	
 	public static void main(String[] args) throws Exception{
@@ -55,13 +55,13 @@ public class CD97_½«ÕûÊı×Ö·û´®×ª³ÉÕûÊıÖµ {
         if(!isValid(arr)){
             return 0;
         }
-        boolean flag=arr[0]=='-'?true:false;//¸ºÊıÊ±ºò±êÖ¾Î»Îªtrue
+        boolean flag=arr[0]=='-'?true:false;//è´Ÿæ•°æ—¶å€™æ ‡å¿—ä½ä¸ºtrue
         long res=0;
         long cur=0;
         long temp;
         for(int i=flag?1:0;i<arr.length;i++){
-            //×Ö·ûÖµ×ª³ÉÊıÖµµÄ¹ı³ÌÖĞ²»ÄÜÊ¹ÓÃLong¡£valueOf()·½·¨
-            //Ê¹ÓÃarr[i]-'0'µÄĞÎÊ½;
+            //å­—ç¬¦å€¼è½¬æˆæ•°å€¼çš„è¿‡ç¨‹ä¸­ä¸èƒ½ä½¿ç”¨Longã€‚valueOf()æ–¹æ³•
+            //ä½¿ç”¨arr[i]-'0'çš„å½¢å¼;
             temp=arr[i]-'0';
             res=res*10L+temp;
             cur=flag?-res:res;

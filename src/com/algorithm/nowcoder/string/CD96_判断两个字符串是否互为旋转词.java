@@ -4,20 +4,20 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CD96_ÅÐ¶ÏÁ½¸ö×Ö·û´®ÊÇ·ñ»¥ÎªÐý×ª´Ê {
-	//	ÌâÄ¿ÃèÊö
-	//	Èç¹ûÒ»¸ö×Ö·û´®Îªstr£¬°Ñ×Ö·û´®µÄÇ°ÃæÈÎÒâ²¿·ÖÅ²µ½ºóÃæÐÎ³ÉµÄ×Ö·û´®½»strµÄÐý×ª´Ê¡£±ÈÈçstr=¡°12345¡±£¬strµÄÐý×ª´®ÓÐ¡°12345¡±¡¢¡°45123¡±µÈµÈ¡£¸ø¶¨Á½¸ö×Ö·û´®£¬ÅÐ¶ÏÊÇ·ñÎªÐý×ª´Ê¡£
-	//	ÊäÈëÃèÊö:
-	//		Êä³ö°üº¬ÈýÐÐ£¬µÚÒ»¸öÁ½¸öÕûÊýnºÍm£¨1 \leq n,m \leq10^5 £©£¨1¡Ün,m¡Ü105£©£¬·Ö±ð±íÊ¾Á½¸ö×Ö·û´®µÄ³¤¶È¡£µÚ¶þÐÐºÍµÚÈýÐÐ¸÷ÊäÈëÒ»¸ö×Ö·û´®¡£
-	//	Êä³öÃèÊö:
-	//		Èç¹ûÁ½¸ö×Ö·û´®»¥ÎªÐý×ª´ÊÇëÊä³ö¡°YES¡±£¬·ñÔòÊä³ö¡°NO¡±¡£
+public class CD96_åˆ¤æ–­ä¸¤ä¸ªå­—ç¬¦ä¸²æ˜¯å¦äº’ä¸ºæ—‹è½¬è¯ {
+	//	é¢˜ç›®æè¿°
+	//	å¦‚æžœä¸€ä¸ªå­—ç¬¦ä¸²ä¸ºstrï¼ŒæŠŠå­—ç¬¦ä¸²çš„å‰é¢ä»»æ„éƒ¨åˆ†æŒªåˆ°åŽé¢å½¢æˆçš„å­—ç¬¦ä¸²äº¤strçš„æ—‹è½¬è¯ã€‚æ¯”å¦‚str=â€œ12345â€ï¼Œstrçš„æ—‹è½¬ä¸²æœ‰â€œ12345â€ã€â€œ45123â€ç­‰ç­‰ã€‚ç»™å®šä¸¤ä¸ªå­—ç¬¦ä¸²ï¼Œåˆ¤æ–­æ˜¯å¦ä¸ºæ—‹è½¬è¯ã€‚
+	//	è¾“å…¥æè¿°:
+	//		è¾“å‡ºåŒ…å«ä¸‰è¡Œï¼Œç¬¬ä¸€ä¸ªä¸¤ä¸ªæ•´æ•°nå’Œmï¼ˆ1 \leq n,m \leq10^5 ï¼‰ï¼ˆ1â‰¤n,mâ‰¤105ï¼‰ï¼Œåˆ†åˆ«è¡¨ç¤ºä¸¤ä¸ªå­—ç¬¦ä¸²çš„é•¿åº¦ã€‚ç¬¬äºŒè¡Œå’Œç¬¬ä¸‰è¡Œå„è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ã€‚
+	//	è¾“å‡ºæè¿°:
+	//		å¦‚æžœä¸¤ä¸ªå­—ç¬¦ä¸²äº’ä¸ºæ—‹è½¬è¯è¯·è¾“å‡ºâ€œYESâ€ï¼Œå¦åˆ™è¾“å‡ºâ€œNOâ€ã€‚
 	
-	//	Ê¾Àý1
-	//		ÊäÈë 
+	//	ç¤ºä¾‹1
+	//		è¾“å…¥ 
 	//			4 4
 	//			abcd
 	//			cdab
-	//		Êä³ö 
+	//		è¾“å‡º 
 	//			YES
 	
 	 public static void main(String[] args) throws IOException {
