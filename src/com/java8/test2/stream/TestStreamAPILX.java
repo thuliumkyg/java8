@@ -7,13 +7,13 @@ import java.util.stream.IntStream;
 
 import org.junit.Test;
 
-import com.java8.test.lambda.Employee;
+import com.java8.test.lambda.lambda.Employee;
  
 
 public class TestStreamAPILX {
 
 	/*
-	 * 1  ¸ø¶¨{1,2,3,4,5} ·µ»Ø{1,2,9,16,25}
+	 * 1  ï¿½ï¿½ï¿½ï¿½{1,2,3,4,5} ï¿½ï¿½ï¿½ï¿½{1,2,9,16,25}
 	 * */
 	@Test
 	public void test1(){
@@ -23,14 +23,14 @@ public class TestStreamAPILX {
 			.forEach(System.out::println);
 	}
 	/*
-	 *  2 ÔõÑùÓÃmapºÍreduce·½·¨ÊýÒ»ÊýÁ÷ÖÐÓÐ¶àÉÙ¸öEmployee
+	 *  2 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mapï¿½ï¿½reduceï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ù¸ï¿½Employee
 	 * */
 	List<Employee> employee = Arrays.asList(
-			new Employee("Ö£Èý",118,99.99),
-			new Employee("Ð¡Ã×",312,34.5),
-			new Employee("Ð¡Ã×",312,34.5),
-			new Employee("Ð¡ÐÇ",32,342),			
-			new Employee("Î÷Î÷",39,34.5));
+			new Employee("Ö£ï¿½ï¿½",118,99.99),
+			new Employee("Ð¡ï¿½ï¿½",312,34.5),
+			new Employee("Ð¡ï¿½ï¿½",312,34.5),
+			new Employee("Ð¡ï¿½ï¿½",32,342),			
+			new Employee("ï¿½ï¿½ï¿½ï¿½",39,34.5));
 	@Test
 	public void test2(){
 		Optional<Integer> count = employee.stream()

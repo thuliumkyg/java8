@@ -1,6 +1,5 @@
 package com.algorithm;
 
-import org.junit.experimental.theories.FromDataPoints;
 
 public class Code01_EqualProbabilityRandom {
 

@@ -4,18 +4,17 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import javax.net.ssl.SSLEngineResult.Status;
 
 import org.junit.Test;
 
-import com.java8.test.lambda.Employee;
+import com.java8.test.lambda.lambda.Employee;
  
 
 public class TestStreamAPI {
 	
 	/*
-	  	1.	¸ø¶¨Ò»¸öÊý×ÖÁÐ±í£¬ÈçºÎ·µ»ØÒ»¸öÓÉÃ¿¸öÊýµÄÆ½·½¹¹³ÉµÄÁÐ±íÄØ£¿
-		£¬¸ø¶¨¡¾1£¬2£¬3£¬4£¬5¡¿£¬ Ó¦¸Ã·µ»Ø¡¾1£¬4£¬9£¬16£¬25¡¿¡£
+	  	1.	ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½Î·ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½ï¿½Ð±ï¿½ï¿½Ø£ï¿½
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½2ï¿½ï¿½3ï¿½ï¿½4ï¿½ï¿½5ï¿½ï¿½ï¿½ï¿½ Ó¦ï¿½Ã·ï¿½ï¿½Ø¡ï¿½1ï¿½ï¿½4ï¿½ï¿½9ï¿½ï¿½16ï¿½ï¿½25ï¿½ï¿½ï¿½ï¿½
 	 */
 	@Test
 	public void test1(){
@@ -27,16 +26,16 @@ public class TestStreamAPI {
 	}
 
 	/*
-	 2.	ÔõÑùÓÃ map ºÍ reduce ·½·¨ÊýÒ»ÊýÁ÷ÖÐÓÐ¶àÉÙ¸öEmployeeÄØ£¿
+	 2.	ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ map ï¿½ï¿½ reduce ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ù¸ï¿½Employeeï¿½Ø£ï¿½
 	 */
 	List<Employee> emps = Arrays.asList(
-			new Employee(102, "ÀîËÄ", 59, 6666.66, Status.BUSY),
-			new Employee(101, "ÕÅÈý", 18, 9999.99, Status.FREE),
-			new Employee(103, "ÍõÎå", 28, 3333.33, Status.VOCATION),
-			new Employee(104, "ÕÔÁù", 8, 7777.77, Status.BUSY),
-			new Employee(104, "ÕÔÁù", 8, 7777.77, Status.FREE),
-			new Employee(104, "ÕÔÁù", 8, 7777.77, Status.FREE),
-			new Employee(105, "ÌïÆß", 38, 5555.55, Status.BUSY)
+//			new Employee(102, "ï¿½ï¿½ï¿½ï¿½", 59, 6666.66, Status.BUSY),
+//			new Employee(101, "ï¿½ï¿½ï¿½ï¿½", 18, 9999.99, Status.FREE),
+//			new Employee(103, "ï¿½ï¿½ï¿½ï¿½", 28, 3333.33, Status.VOCATION),
+//			new Employee(104, "ï¿½ï¿½ï¿½ï¿½", 8, 7777.77, Status.BUSY),
+//			new Employee(104, "ï¿½ï¿½ï¿½ï¿½", 8, 7777.77, Status.FREE),
+//			new Employee(104, "ï¿½ï¿½ï¿½ï¿½", 8, 7777.77, Status.FREE),
+//			new Employee(105, "ï¿½ï¿½ï¿½ï¿½", 38, 5555.55, Status.BUSY)
 	);
 	
 	@Test

@@ -6,35 +6,34 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.junit.Test;
 
-import com.java8.test.lambda.Employee;
+import com.java8.test.lambda.lambda.Employee;
  
 
 /*
- * ÖÕÖ¹²Ù×÷
+ * ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½
  * 
- * ²éÕÒÓëÆ¥Åä
- * 	allMath --¼ì²éÊÇ·ñÆ¥ÅäËùÓÐÔªËØ
- * 	anyMath --¼ì²éÊÇ·ñÖÁÉÙÆ¥ÅäÒ»¸öÔªËØ
- * 	noneMath -- ¼ì²éÊÇ·ñÃ»ÓÐÆ¥ÅäËùÓÐÔªËØ
- * 	findFirst -- ·µ»ØµÚÒ»¸öÔªËØ
- * 	findAny -- ·µ»Øµ±Ç°Á÷ÖÐµÄÈÎÒâÔªËØ
- * 	count -- ·µ»ØÁ÷ÖÐÔªËØµÄ×Ü¸öÊý
- * 	max -- ·µ»ØÁ÷ÖÐ×î´óÖµ
- * 	min -- ·µ»ØÁ÷ÖÐ×îÐ¡Öµ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½
+ * 	allMath --ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+ * 	anyMath --ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
+ * 	noneMath -- ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ã»ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+ * 	findFirst -- ï¿½ï¿½ï¿½Øµï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
+ * 	findAny -- ï¿½ï¿½ï¿½Øµï¿½Ç°ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+ * 	count -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½Ü¸ï¿½ï¿½ï¿½
+ * 	max -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+ * 	min -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Öµ
  * */
 public class TestStreamEND {
 	List<Employee> employee = Arrays.asList(
-			new Employee("Ö£Èý",118,99.99),
-			new Employee("Ð¡Ã×",312,34.5),
-			new Employee("Ð¡Ã×",312,34.5),
-			new Employee("Ð¡Ã×",312,34.5),
+			new Employee("Ö£ï¿½ï¿½",118,99.99),
+			new Employee("Ð¡ï¿½ï¿½",312,34.5),
+			new Employee("Ð¡ï¿½ï¿½",312,34.5),
+			new Employee("Ð¡ï¿½ï¿½",312,34.5),
 			
-			new Employee("Î÷Î÷",39,34.5));
+			new Employee("ï¿½ï¿½ï¿½ï¿½",39,34.5));
 	
 	@Test
 	public void test(){
@@ -44,10 +43,10 @@ public class TestStreamEND {
 		 System.out.println(op.get());
 	}
 	/*
-	 * ¹æÔ¼
+	 * ï¿½ï¿½Ô¼
 	 * 	reduce(T identity,BinaryOperator) 
 	 * 	reduce(BinaryOperator) 
-	 * 	¿ÉÒÔ½«Á÷ÖÐÔªËØ·´¸´½áºÏÆðÀ´£¬µÃµ½Ò»¸öÖµ¡£
+	 * 	ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½Ò»ï¿½ï¿½Öµï¿½ï¿½
 	 * */
 	@Test
 	public void tes3(){
@@ -62,8 +61,8 @@ public class TestStreamEND {
 		System.out.println(op.get());
 	}
 	/*
-	 * ÊÕ¼¯
-	 * 	 collect -- ½«Á÷×ª»»ÎªÆäËûÐÎÊ½¡£½ÓÊÕÒ»¸öCollector½Ó¿ÚµÄÊµÏÖ£¬ÓÃÓÚ¸øStreamÖÐÔªËØ×ö»ã×ÜµÄ·½·¨
+	 * ï¿½Õ¼ï¿½
+	 * 	 collect -- ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Collectorï¿½Ó¿Úµï¿½Êµï¿½Ö£ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½Streamï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÜµÄ·ï¿½ï¿½ï¿½
 	 * */
 	@Test
 	public void test4(){
@@ -71,7 +70,7 @@ public class TestStreamEND {
 				.map(Employee::getName)
 				.collect(Collectors.toList());
 		 list.forEach(System.out::println);
-		 System.out.println("·Åµ½ÌØÊâµÄ¼¯ºÏÖÐ-----");
+		 System.out.println("ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½-----");
 		 HashSet<String> hs = employee.stream()
 				 					.map(Employee::getName)
 				 					.collect(Collectors.toCollection(HashSet::new));
@@ -80,27 +79,27 @@ public class TestStreamEND {
 	
 	@Test
 	public void test5(){
-		//×ÜÊý
+		//ï¿½ï¿½ï¿½ï¿½
 		Long count = employee.stream()
 				.collect(Collectors.counting());
 	   System.out.println(count);
 	   
-	   //Æ½¾ùÖµ
+	   //Æ½ï¿½ï¿½Öµ
 	  Double avg =  employee.stream()
 	   			.collect(Collectors.averagingDouble(Employee::getSalary)); 
 	   System.out.println(avg);	 
 	   
-	   //×ÜºÍ    (×î´óÖµ   £¬×îÐ¡Öµ   £©
+	   //ï¿½Üºï¿½    (ï¿½ï¿½ï¿½Öµ   ï¿½ï¿½ï¿½ï¿½Ð¡Öµ   ï¿½ï¿½
 	   Double sum =  employee.stream()
 	   				.collect(Collectors.summingDouble(Employee::getSalary));
 	   System.out.println(sum);
 	   
-	   //·Ö×é
+	   //ï¿½ï¿½ï¿½ï¿½
 	  Map<String,List<Employee>> map =  employee.stream()
 	   			.collect(Collectors.groupingBy(Employee::getName));
 	  System.out.println(map);
 	   
-	  //·ÖÇø
+	  //ï¿½ï¿½ï¿½ï¿½
 	  Map<Boolean,List<Employee>> map1 = employee.stream()
 	  			.collect(Collectors.partitioningBy((e) -> e.getSalary() >50));
 	  System.out.println(map1);

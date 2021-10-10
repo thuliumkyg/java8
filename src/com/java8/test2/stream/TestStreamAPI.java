@@ -7,36 +7,36 @@ import java.util.stream.Stream;
 
 import org.junit.Test;
 
-import com.java8.test.lambda.Employee;
+import com.java8.test.lambda.lambda.Employee;
  
 
 /*
- * Ò»¡¢Stream µÄÈý¸ö²Ù×÷²½Öè
- * 	   1. ´´½¨Stream
- * 	   2. ÖÐ¼ä²Ù×÷
- * 	   3. ÖÕÖ¹²Ù×÷£¨ÖÕ¶Ë²Ù×÷£©	
+ * Ò»ï¿½ï¿½Stream ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * 	   1. ï¿½ï¿½ï¿½ï¿½Stream
+ * 	   2. ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½
+ * 	   3. ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¶Ë²ï¿½ï¿½ï¿½ï¿½ï¿½	
  * 
  * */
 public class TestStreamAPI {
 	@Test
 	public void test1(){
-		//1 ¿ÉÒÔÍ¨¹ýCollectionÏµÁÐ¼¯ºÏÌá¹©µÄStream£¨£© »òparalleStream()
+		//1 ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½CollectionÏµï¿½Ð¼ï¿½ï¿½ï¿½ï¿½á¹©ï¿½ï¿½Streamï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½paralleStream()
 		List<String> list = new ArrayList<>();
 		Stream<String> stream1 = list.stream();
 		
-		//2 Í¨¹ýArrays ÖÐµÄ¾²Ì¬·½·¨stream£¨£© »ñÈ¡Êý×éÁ÷
+		//2 Í¨ï¿½ï¿½Arrays ï¿½ÐµÄ¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½streamï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		Employee[] emps  = new Employee[10];
 		Stream<Employee> stream2 = Arrays.stream(emps);
 		
-		//3 Í¨¹ýStream ÀàÖÐµÄ¾²Ì¬ ·½·¨ of£¨£©
+		//3 Í¨ï¿½ï¿½Stream ï¿½ï¿½ï¿½ÐµÄ¾ï¿½Ì¬ ï¿½ï¿½ï¿½ï¿½ ofï¿½ï¿½ï¿½ï¿½
 		Stream<String> stream3 = Stream.of("aa","bb","cc");
 		
-		//4 ´´½¨ÎÞÏÞÁ÷
-			//µü´ú
+		//4 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//ï¿½ï¿½ï¿½ï¿½
 			Stream<Integer> stream4 =  Stream.iterate(0, (x) -> x + 2);
 			stream4.limit(10).forEach(System.out::println);
 			
-			//Éú³É
+			//ï¿½ï¿½ï¿½ï¿½
 			Stream.generate(() ->  Math.random()).limit(10).forEach(System.out::println);;
 	}
 }
