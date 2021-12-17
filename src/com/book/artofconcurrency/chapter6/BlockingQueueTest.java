@@ -1,7 +1,5 @@
 package com.book.artofconcurrency.chapter6;
 
-import com.jvm.c2_classloader.T008_LazyLoading;
-
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.LinkedBlockingDeque;
