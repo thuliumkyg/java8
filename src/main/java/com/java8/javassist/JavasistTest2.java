@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 
 /**
  *新增一个方法
@@ -23,7 +24,7 @@ public class JavasistTest2 {
         //找到本文件路径
         URL url = JavasistTest2.class.getClassLoader().getResource("");
         String file = url.getFile();
-        log.info("文件存储路径：" + file);
+        System.out.println("文件存储路径：" + file);
         ClassPool cp = ClassPool.getDefault();
         CtClass ctClass = cp.makeClass("com.java8.javassist.Hello");
 
