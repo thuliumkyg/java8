@@ -19,7 +19,6 @@ public enum GatewayState {
     private String value;
 
 
-
     GatewayState(Integer key, String value) {
         this.key = key;
         this.value = value;

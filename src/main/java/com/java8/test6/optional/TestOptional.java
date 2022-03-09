@@ -54,7 +54,7 @@ public class TestOptional {
         Assert.assertEquals(user.getEmail(), opt.get().getEmail());
 
         //if 检验是否有值的另一个选择，ifPresent()接受一个Consumer,对象不为空执行Lambda表达式
-         opt.ifPresent(u -> Assert.assertEquals(user.getEmail(), u.getEmail()));
+        opt.ifPresent(u -> Assert.assertEquals(user.getEmail(), u.getEmail()));
 
     }
 
@@ -100,7 +100,7 @@ public class TestOptional {
         //返回异常
         User user = null;
         User result = Optional.ofNullable(user)
-                .orElseThrow( () -> new IllegalArgumentException());
+                .orElseThrow(() -> new IllegalArgumentException());
     }
 
     /**

@@ -1,10 +1,11 @@
 package com.design.behaviour.state;
 
-public class CapeMario3 implements IMario3{
+public class CapeMario3 implements IMario3 {
 
     private static final CapeMario3 instance = new CapeMario3();
 
-    private CapeMario3() {}
+    private CapeMario3() {
+    }
 
     public static CapeMario3 getInstance() {
         return instance;

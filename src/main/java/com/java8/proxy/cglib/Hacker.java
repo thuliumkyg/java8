@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 /**
  * 实现了方法拦截器接口
  *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/21 16:03
  */
 public class Hacker implements MethodInterceptor {

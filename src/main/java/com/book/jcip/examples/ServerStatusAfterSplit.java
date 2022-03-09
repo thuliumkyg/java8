@@ -15,8 +15,10 @@ import java.util.Set;
  */
 @ThreadSafe
 public class ServerStatusAfterSplit {
-    @GuardedBy("users") public final Set<String> users;
-    @GuardedBy("queries") public final Set<String> queries;
+    @GuardedBy("users")
+    public final Set<String> users;
+    @GuardedBy("queries")
+    public final Set<String> queries;
 
     public ServerStatusAfterSplit() {
         users = new HashSet<String>();

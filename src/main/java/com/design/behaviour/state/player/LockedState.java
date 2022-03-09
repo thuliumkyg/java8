@@ -4,7 +4,7 @@ package com.design.behaviour.state.player;
  * @author bingshan
  * @date 2021/10/17 23:31
  */
-public class LockedState extends State{
+public class LockedState extends State {
 
     LockedState(Player player) {
         super(player);

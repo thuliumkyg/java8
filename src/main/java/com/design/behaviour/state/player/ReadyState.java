@@ -4,7 +4,7 @@ package com.design.behaviour.state.player;
  * @author bingshan
  * @date 2021/10/17 23:31
  */
-public class ReadyState extends State{
+public class ReadyState extends State {
     public ReadyState(Player player) {
         super(player);
     }

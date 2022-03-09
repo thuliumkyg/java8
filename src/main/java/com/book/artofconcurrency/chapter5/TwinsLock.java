@@ -11,10 +11,10 @@ import java.util.concurrent.locks.Lock;
 public class TwinsLock implements Lock {
     /**
      * 设计一个同步工具:
-     *   该工具在同一时刻,只允许子允许至多两个线程同时访问, 超过两个线程的访问将被阻塞,我们将这个同步工具命名为TwinsLock
-     *
-     *   允许多个线程访问,共享式访问.
-     *   至多两个线程同时访问,资源数为2
+     * 该工具在同一时刻,只允许子允许至多两个线程同时访问, 超过两个线程的访问将被阻塞,我们将这个同步工具命名为TwinsLock
+     * <p>
+     * 允许多个线程访问,共享式访问.
+     * 至多两个线程同时访问,资源数为2
      */
 
     private final Sync sync = new Sync(2);
@@ -34,7 +34,7 @@ public class TwinsLock implements Lock {
 
         @Override
         public int tryAcquireShared(int reduceCount) {
-            for (;;) {
+            for (; ; ) {
                 int current = getState();
                 int newCount = current - reduceCount;
                 if (newCount < 0 || compareAndSetState(current, newCount)) {
@@ -45,7 +45,7 @@ public class TwinsLock implements Lock {
 
         @Override
         public boolean tryReleaseShared(int returnCount) {
-            for (;;) {
+            for (; ; ) {
                 int current = getState();
                 int newCount = current + returnCount;
                 //保证原子性
@@ -64,6 +64,7 @@ public class TwinsLock implements Lock {
     public void lock() {
         sync.acquireShared(1);
     }
+
     @Override
     public void unlock() {
         sync.releaseShared(1);
@@ -83,7 +84,6 @@ public class TwinsLock implements Lock {
     public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
         return false;
     }
-
 
 
     @Override

@@ -1,10 +1,13 @@
 package com.design.behaviour.state.gateway;
 
-public class CannelGateway extends AbstractGateway{
+public class CannelGateway extends AbstractGateway {
 
     private static final CannelGateway instance = new CannelGateway();
 
-    private CannelGateway() {};
+    private CannelGateway() {
+    }
+
+    ;
 
     public static CannelGateway getInstance() {
         return instance;

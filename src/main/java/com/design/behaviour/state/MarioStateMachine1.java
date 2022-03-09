@@ -51,8 +51,6 @@ public class MarioStateMachine1 {
     }
 
 
-
-
     public int getScore() {
         return score;
     }

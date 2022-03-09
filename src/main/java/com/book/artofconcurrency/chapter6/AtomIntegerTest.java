@@ -9,19 +9,19 @@ public class AtomIntegerTest {
 
     /**
      * Atomic包里一共提供了13个类,属于4种类型的原子更新方式
-     *     原子更新基本类型,原子更新数组,原子更新引用和原子更新属性
-     *   基本都是使用Unsafe实现的包装类
+     * 原子更新基本类型,原子更新数组,原子更新引用和原子更新属性
+     * 基本都是使用Unsafe实现的包装类
      */
 
 
-    static AtomicInteger ai  = new AtomicInteger(1);
+    static AtomicInteger ai = new AtomicInteger(1);
 
 
     /**
      * 数组value通过构造方法传递进去,
      * AIA会将当前数组复制一份,所以AIA对内部的数组元素进行修改时,不会影响传入的数组
      */
-    static int[] value = new int[]{1,2,3};
+    static int[] value = new int[]{1, 2, 3};
     static AtomicIntegerArray aia = new AtomicIntegerArray(value);
 
 
@@ -32,15 +32,14 @@ public class AtomIntegerTest {
 
 
     /**
-     *原子更新字段类
-     *     原子地更新某个类里的某个字段
-     *
+     * 原子更新字段类
+     * 原子地更新某个类里的某个字段
+     * <p>
      * 原子更新字段类需要两步:
-     *   1. 因为原子更新字段类都是抽象类,每次使用必须使用静态方法newUpdater()创建一个更新容器,并设置想要更新的类和属性
-     *   2. 更新类的字段必须使用public volatile修饰符
+     * 1. 因为原子更新字段类都是抽象类,每次使用必须使用静态方法newUpdater()创建一个更新容器,并设置想要更新的类和属性
+     * 2. 更新类的字段必须使用public volatile修饰符
      */
     private static AtomicIntegerFieldUpdater<User1> aifu = AtomicIntegerFieldUpdater.newUpdater(User1.class, "old");
-
 
 
     public static void main(String[] args) {
@@ -70,8 +69,6 @@ public class AtomIntegerTest {
         //输出现在的年龄
         System.out.println(aifu.get(conan));
     }
-
-
 
 
     public static class User1 {

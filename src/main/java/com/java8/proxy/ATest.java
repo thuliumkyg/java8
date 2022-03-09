@@ -7,9 +7,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- *
- *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/20 20:14
  */
 public class ATest {

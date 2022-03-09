@@ -2,7 +2,7 @@ package com.book.jcip.examples;
 
 /**
  * LeftRightDeadlock
- *
+ * <p>
  * Simple lock-ordering deadlock
  *
  * @author Brian Goetz and Tim Peierls

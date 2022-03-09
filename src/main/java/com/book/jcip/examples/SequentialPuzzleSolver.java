@@ -12,7 +12,7 @@ import java.util.Set;
  * @author Brian Goetz and Tim Peierls
  */
 
-public class SequentialPuzzleSolver <P, M> {
+public class SequentialPuzzleSolver<P, M> {
     private final Puzzle<P, M> puzzle;
     private final Set<P> seen = new HashSet<P>();
 

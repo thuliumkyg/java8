@@ -22,7 +22,8 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 public class PrimeGenerator implements Runnable {
     private static ExecutorService exec = Executors.newCachedThreadPool();
 
-    @GuardedBy("this") private final List<BigInteger> primes
+    @GuardedBy("this")
+    private final List<BigInteger> primes
             = new ArrayList<BigInteger>();
     private volatile boolean cancelled;
 

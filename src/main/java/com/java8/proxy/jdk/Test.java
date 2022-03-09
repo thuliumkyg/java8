@@ -5,9 +5,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 
 /**
- *
- *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/21 14:39
  */
 public class Test {
@@ -32,7 +30,6 @@ public class Test {
         System.out.println("-----------");
         Rechargable rechargable = (Rechargable) o;
         rechargable.recharge();
-
 
 
         //生成动态代理类的字节码并且保存到硬盘中：

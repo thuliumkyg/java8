@@ -29,7 +29,7 @@ public class FairAndUnfairTest {
             new Job(fairLock).start();
         }
         Thread.sleep(3000L);
-       System.out.println();
+        System.out.println();
         for (int i = 0; i < 5; i++) {
             new Job(unfairLock).start();
         }
@@ -38,6 +38,7 @@ public class FairAndUnfairTest {
 
     private static class Job extends Thread {
         private ReentrantLock2 lock;
+
         public Job(ReentrantLock2 lock) {
             this.lock = lock;
         }
@@ -52,7 +53,7 @@ public class FairAndUnfairTest {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }finally {
+            } finally {
                 lock.unlock();
             }
             System.out.println("Lock By [" + Thread.currentThread().getName() + "], Waiting by [ " + lock.getQueuedThreads() + "]");
@@ -64,7 +65,7 @@ public class FairAndUnfairTest {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }finally {
+            } finally {
                 lock.unlock();
             }
             System.out.println("Lock By [" + currentThread().getName() + "], Waiting by [ " + lock.getQueuedThreads() + "]");
@@ -82,8 +83,6 @@ public class FairAndUnfairTest {
             return arrayList;
         }
     }
-
-
 
 
 }

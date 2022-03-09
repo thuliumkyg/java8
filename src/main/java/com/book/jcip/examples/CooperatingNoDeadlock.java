@@ -16,7 +16,8 @@ import java.util.Set;
 class CooperatingNoDeadlock {
     @ThreadSafe
     class Taxi {
-        @GuardedBy("this") private Point location, destination;
+        @GuardedBy("this")
+        private Point location, destination;
         private final Dispatcher dispatcher;
 
         public Taxi(Dispatcher dispatcher) {
@@ -48,8 +49,10 @@ class CooperatingNoDeadlock {
 
     @ThreadSafe
     class Dispatcher {
-        @GuardedBy("this") private final Set<Taxi> taxis;
-        @GuardedBy("this") private final Set<Taxi> availableTaxis;
+        @GuardedBy("this")
+        private final Set<Taxi> taxis;
+        @GuardedBy("this")
+        private final Set<Taxi> availableTaxis;
 
         public Dispatcher() {
             taxis = new HashSet<Taxi>();

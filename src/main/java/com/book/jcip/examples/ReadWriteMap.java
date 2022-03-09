@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  *
  * @author Brian Goetz and Tim Peierls
  */
-public class ReadWriteMap <K,V> {
+public class ReadWriteMap<K, V> {
     private final Map<K, V> map;
     private final ReadWriteLock lock = new ReentrantReadWriteLock();
     private final Lock r = lock.readLock();

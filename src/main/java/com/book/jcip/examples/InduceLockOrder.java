@@ -2,7 +2,7 @@ package com.book.jcip.examples;
 
 /**
  * InduceLockOrder
- *
+ * <p>
  * Inducing a lock order to avoid deadlock
  *
  * @author Brian Goetz and Tim Peierls

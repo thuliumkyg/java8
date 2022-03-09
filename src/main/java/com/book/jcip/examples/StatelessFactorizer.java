@@ -7,9 +7,9 @@ import java.math.BigInteger;
 
 /**
  * StatelessFactorizer
- *
+ * <p>
  * A stateless servlet
- * 
+ *
  * @author Brian Goetz and Tim Peierls
  */
 @ThreadSafe
@@ -30,6 +30,6 @@ public class StatelessFactorizer extends GenericServlet implements Servlet {
 
     BigInteger[] factor(BigInteger i) {
         // Doesn't really factor
-        return new BigInteger[] { i };
+        return new BigInteger[]{i};
     }
 }

@@ -2,6 +2,7 @@ package com.book.artofconcurrency.chapter4;
 
 /**
  * 一个简单的线程池接口定义
+ *
  * @author bingshan
  * @date 2021/10/23 13:31
  */

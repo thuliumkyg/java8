@@ -1,7 +1,5 @@
 package com.java8.javassist;/**
- *
- *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/13 18:59
  */
 
@@ -16,7 +14,7 @@ import java.io.IOException;
  * 它可以在Java程序运行时定义一个新的类，并加载到JVM中；还可以在JVM加载时修改一个类文件。
  * Javassist使用户不必关心字节码相关的规范也是可以编辑类文件的。
  *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/13 18:59
  */
 public class JavassistTest {

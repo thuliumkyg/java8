@@ -4,9 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- *
- *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/21 14:37
  */
 public class InvocationHandlerImpl implements InvocationHandler {
@@ -19,9 +17,9 @@ public class InvocationHandlerImpl implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("You are going to invoke "+method.getName()+" ...");
+        System.out.println("You are going to invoke " + method.getName() + " ...");
         method.invoke(car, null);
-        System.out.println(method.getName()+" invocation Has Been finished...");
+        System.out.println(method.getName() + " invocation Has Been finished...");
         return null;
     }
 }

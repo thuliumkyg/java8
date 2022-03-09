@@ -9,7 +9,7 @@ import java.util.Set;
  *
  * @author Brian Goetz and Tim Peierls
  */
-public interface Puzzle <P, M> {
+public interface Puzzle<P, M> {
     P initialPosition();
 
     boolean isGoal(P position);

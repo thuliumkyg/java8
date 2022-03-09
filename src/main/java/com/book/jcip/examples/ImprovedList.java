@@ -9,7 +9,7 @@ import java.util.ListIterator;
 
 /**
  * ImprovedList
- *
+ * <p>
  * Implementing put-if-absent using composition
  *
  * @author Brian Goetz and Tim Peierls
@@ -21,7 +21,9 @@ public class ImprovedList<T> implements List<T> {
     /**
      * PRE: list argument is thread-safe.
      */
-    public ImprovedList(List<T> list) { this.list = list; }
+    public ImprovedList(List<T> list) {
+        this.list = list;
+    }
 
     public synchronized boolean putIfAbsent(T x) {
         boolean contains = list.contains(x);
@@ -32,7 +34,7 @@ public class ImprovedList<T> implements List<T> {
 
     // Plain vanilla delegation for List methods.
     // Mutative methods must be synchronized to ensure atomicity of putIfAbsent.
-    
+
     public int size() {
         return list.size();
     }
@@ -129,5 +131,7 @@ public class ImprovedList<T> implements List<T> {
         return list.subList(fromIndex, toIndex);
     }
 
-    public synchronized void clear() { list.clear(); }
+    public synchronized void clear() {
+        list.clear();
+    }
 }

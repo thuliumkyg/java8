@@ -6,6 +6,7 @@ import java.net.Socket;
 
 /**
  * 基于线程池的简单Web服务器
+ *
  * @author bingshan
  * @date 2021/10/23 15:19
  */
@@ -27,7 +28,7 @@ public class SimpleHttpServer {
 
     public static void setBasePath(String basePath) {
         if (basePath != null && new File(basePath).exists() && new File(basePath).isDirectory())
-        SimpleHttpServer.basePath = basePath;
+            SimpleHttpServer.basePath = basePath;
     }
 
     //启动SimpleHttpServer
@@ -45,6 +46,7 @@ public class SimpleHttpServer {
 
     static class HttpRequestHandler implements Runnable {
         private Socket socket;
+
         public HttpRequestHandler(Socket socket) {
             this.socket = socket;
         }
@@ -91,9 +93,9 @@ public class SimpleHttpServer {
                 }
                 out.flush();
             } catch (IOException e) {
-                 out.println("HTTP/1.1 500");
-                 out.println("");
-                 out.flush();
+                out.println("HTTP/1.1 500");
+                out.println("");
+                out.flush();
             } finally {
                 close(br, in, reader, out, socket);
             }

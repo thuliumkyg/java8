@@ -10,7 +10,7 @@ import com.book.jcip.annotations.ThreadSafe;
  * @author Brian Goetz and Tim Peierls
  */
 @ThreadSafe
-        public class GrumpyBoundedBuffer <V> extends BaseBoundedBuffer<V> {
+public class GrumpyBoundedBuffer<V> extends BaseBoundedBuffer<V> {
     public GrumpyBoundedBuffer() {
         this(100);
     }

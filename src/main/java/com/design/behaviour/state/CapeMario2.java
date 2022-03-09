@@ -1,6 +1,6 @@
 package com.design.behaviour.state;
 
-public class CapeMario2 implements IMario2{
+public class CapeMario2 implements IMario2 {
 
     private MarioStateMachine2 stateMachine2;
 

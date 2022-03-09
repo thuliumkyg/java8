@@ -15,8 +15,10 @@ import java.util.Set;
  */
 @ThreadSafe
 public class ServerStatusBeforeSplit {
-    @GuardedBy("this") public final Set<String> users;
-    @GuardedBy("this") public final Set<String> queries;
+    @GuardedBy("this")
+    public final Set<String> users;
+    @GuardedBy("this")
+    public final Set<String> queries;
 
     public ServerStatusBeforeSplit() {
         users = new HashSet<String>();

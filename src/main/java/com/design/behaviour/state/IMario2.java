@@ -5,7 +5,10 @@ public interface IMario2 {
 
     //事件定义
     void obtainMushRoom();
+
     void obtainCape();
+
     void obtainFireFlower();
+
     void meetMonster();
 }

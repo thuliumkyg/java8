@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * UnsafeCachingFactorizer
- *
+ * <p>
  * Servlet that attempts to cache its last result without adequate atomicity
  *
  * @author Brian Goetz and Tim Peierls

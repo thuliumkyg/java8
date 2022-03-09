@@ -13,8 +13,9 @@ import java.util.concurrent.CountDownLatch;
  * @author Brian Goetz and Tim Peierls
  */
 @ThreadSafe
-public class ValueLatch <T> {
-    @GuardedBy("this") private T value = null;
+public class ValueLatch<T> {
+    @GuardedBy("this")
+    private T value = null;
     private final CountDownLatch done = new CountDownLatch(1);
 
     public boolean isSet() {

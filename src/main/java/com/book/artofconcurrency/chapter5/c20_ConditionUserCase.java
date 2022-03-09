@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- *  Condition 使用方式
+ * Condition 使用方式
  */
 public class c20_ConditionUserCase {
     Lock lock = new ReentrantLock();
@@ -24,7 +24,7 @@ public class c20_ConditionUserCase {
         lock.lock();
         try {
             condition.signal();
-        }finally {
+        } finally {
             lock.unlock();
         }
     }

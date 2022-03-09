@@ -1,10 +1,13 @@
 package com.design.behaviour.state.gateway;
 
-public class StopGateway extends AbstractGateway{
+public class StopGateway extends AbstractGateway {
 
     private static final StopGateway instance = new StopGateway();
 
-    private StopGateway() {};
+    private StopGateway() {
+    }
+
+    ;
 
     public static StopGateway getInstance() {
         return instance;

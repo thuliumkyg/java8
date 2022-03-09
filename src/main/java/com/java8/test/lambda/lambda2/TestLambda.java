@@ -37,91 +37,92 @@ import org.junit.Test;
   * */
 public class TestLambda {
 
-	@Test
-	public void test1(){
-		int num = 0;  //jdk1.7 ������final
-		
-		Runnable r = new Runnable(){  
-			@Override
-			public void run() {
-				System.out.println("Hellow Lambda  " +  num); 
-				
-			}
-			
-		};
-		r.run();
-		
-		System.out.println("-----");
-		
-		Runnable r1 = () -> System.out.println("Hellow Lambda");
-		r1.run();
-	}
-	
-	@Test
-	public void test2(){
-		Consumer<String> con = x -> System.out.println(x);
-		con.accept("hsfhejjj");
-	}
-	
-	@Test
-	public void test3(){
-		Comparator<Integer> com = (x,y) ->{
-			System.out.println("����ʽ�ӿ�");
-			return Integer.compare(x, y);
-		};
-	}
-	
-	@Test
-	public void test4(){
-		Comparator<Integer> com = (x,y) ->  Integer.compare(x, y);
-		 
-	}
-	
-	@Test
-	public void test5(){
-		//�����ƶ�
-		String[] strs = {"aa","bb","ccc"};
-		List<String> list = new ArrayList<>();
-			
-	}
-	
-	//���󣺶�һ������������
-	@Test
-	public void test6(){
-		Integer num = operation(100, (x) -> x * x ) ;
-		System.out.println("num:"+num);
-	}
-	
-	public Integer operation(Integer num ,MyFun mf){
-		return mf.getValue(num);
-	}
-	
-	List<Employee> employee = Arrays.asList(
-			new Employee("֣��",118,99.99),
-			new Employee("С��",312,34.5),
-			new Employee("С��",39,34.5));
-	@Test 
-	public void test11(){
-		Collections.sort(  employee,(e1,e2) -> {
-			if(e1.getAge() == e2.getAge()){
-				return e1.getName().compareTo(e2.getName());
-			}else{
-				return Integer.compare(e1.getAge(), e2.getAge());
-			}
-		});
-		
-		for(Employee emp : employee){
-			System.out.println(emp);
-		}
-		String upper = strHandler("abfehh", (e) -> e.toUpperCase());
-		System.out.println(upper);
-		
-		String upper1 = strHandler("serrerertff", (st) -> st.substring(2,5));
-		System.out.println(upper1);
-	
-	}
-	
-	public String strHandler(String str, MyFunction mf){
-		return mf.getValue(str);
-	}
+    @Test
+    public void test1() {
+        int num = 0;  //jdk1.7 ������final
+
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Hellow Lambda  " + num);
+
+            }
+
+        };
+        r.run();
+
+        System.out.println("-----");
+
+        Runnable r1 = () -> System.out.println("Hellow Lambda");
+        r1.run();
+    }
+
+    @Test
+    public void test2() {
+        Consumer<String> con = x -> System.out.println(x);
+        con.accept("hsfhejjj");
+    }
+
+    @Test
+    public void test3() {
+        Comparator<Integer> com = (x, y) -> {
+            System.out.println("����ʽ�ӿ�");
+            return Integer.compare(x, y);
+        };
+    }
+
+    @Test
+    public void test4() {
+        Comparator<Integer> com = (x, y) -> Integer.compare(x, y);
+
+    }
+
+    @Test
+    public void test5() {
+        //�����ƶ�
+        String[] strs = {"aa", "bb", "ccc"};
+        List<String> list = new ArrayList<>();
+
+    }
+
+    //���󣺶�һ������������
+    @Test
+    public void test6() {
+        Integer num = operation(100, (x) -> x * x);
+        System.out.println("num:" + num);
+    }
+
+    public Integer operation(Integer num, MyFun mf) {
+        return mf.getValue(num);
+    }
+
+    List<Employee> employee = Arrays.asList(
+            new Employee("֣��", 118, 99.99),
+            new Employee("С��", 312, 34.5),
+            new Employee("С��", 39, 34.5));
+
+    @Test
+    public void test11() {
+        Collections.sort(employee, (e1, e2) -> {
+            if (e1.getAge() == e2.getAge()) {
+                return e1.getName().compareTo(e2.getName());
+            } else {
+                return Integer.compare(e1.getAge(), e2.getAge());
+            }
+        });
+
+        for (Employee emp : employee) {
+            System.out.println(emp);
+        }
+        String upper = strHandler("abfehh", (e) -> e.toUpperCase());
+        System.out.println(upper);
+
+        String upper1 = strHandler("serrerertff", (st) -> st.substring(2, 5));
+        System.out.println(upper1);
+
+    }
+
+    public String strHandler(String str, MyFunction mf) {
+        return mf.getValue(str);
+    }
 }

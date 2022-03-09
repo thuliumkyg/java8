@@ -1,10 +1,10 @@
-package com.java8.proxy;/**
- *
- *
- * @author  bingshan
+package com.java8.proxy;
+
+/**
+ * @author bingshan
  * @date 2021/12/20 20:06
  */
-public class AStationProxy implements ATicketService{
+public class AStationProxy implements ATicketService {
 
     private AStation station;
 

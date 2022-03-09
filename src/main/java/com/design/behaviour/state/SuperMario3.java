@@ -1,10 +1,13 @@
 package com.design.behaviour.state;
 
-public class SuperMario3 implements IMario3{
+public class SuperMario3 implements IMario3 {
 
     private static final SuperMario3 instance = new SuperMario3();
 
-    private SuperMario3(){};
+    private SuperMario3() {
+    }
+
+    ;
 
     public static SuperMario3 getInstance() {
         return instance;

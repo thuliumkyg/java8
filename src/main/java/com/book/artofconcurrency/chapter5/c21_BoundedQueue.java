@@ -6,8 +6,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 通过有界队列的方式,深入了解Condition的使用方式
- *   有界队列:
- *        一种特殊的队列,当队列为空时,队列的获取操作将会阻塞获取线程,直到队列中有新增元素,当队列已满时,队列的插入操作将会阻塞插入线程,直到队列出现空位
+ * 有界队列:
+ * 一种特殊的队列,当队列为空时,队列的获取操作将会阻塞获取线程,直到队列中有新增元素,当队列已满时,队列的插入操作将会阻塞插入线程,直到队列出现空位
  */
 public class c21_BoundedQueue<T> {
 
@@ -35,7 +35,7 @@ public class c21_BoundedQueue<T> {
             }
             ++count;
             notEmpty.signal();
-        }finally {
+        } finally {
             lock.unlock();
         }
     }

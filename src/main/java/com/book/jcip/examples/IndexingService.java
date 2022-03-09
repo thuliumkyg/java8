@@ -80,7 +80,9 @@ public class IndexingService {
 
         public void indexFile(File file) {
             /*...*/
-        };
+        }
+
+        ;
     }
 
     public void start() {

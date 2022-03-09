@@ -7,9 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- *
- *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/21 14:57
  */
 public class ProxyUtils {
@@ -26,7 +24,7 @@ public class ProxyUtils {
         String paths = clazz.getResource(".").getPath();
         System.out.println(paths);
 
-        try(FileOutputStream out = new FileOutputStream(paths + proxyName + ".class")) {
+        try (FileOutputStream out = new FileOutputStream(paths + proxyName + ".class")) {
             //保留到硬盘中    out/production/java8/com/java8/proxy/jdk/
             out.write(classFile);
             out.flush();

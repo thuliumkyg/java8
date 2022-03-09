@@ -1,9 +1,9 @@
 package com.java8.proxy.cglib;
 
 /**
- *
  * 程序猿类
- * @author  bingshan
+ *
+ * @author bingshan
  * @date 2021/12/21 16:00
  */
 public class Programmer {
@@ -14,14 +14,12 @@ public class Programmer {
     }
 
     //default
-    void go()
-    {
+    void go() {
         System.out.println("car go no xiushi");
     }
 
     //protected
-    protected void test()
-    {
+    protected void test() {
         System.out.println("car test protected");
     }
 }

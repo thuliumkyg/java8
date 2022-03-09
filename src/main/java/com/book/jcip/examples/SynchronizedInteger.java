@@ -12,7 +12,8 @@ import com.book.jcip.annotations.ThreadSafe;
  */
 @ThreadSafe
 public class SynchronizedInteger {
-    @GuardedBy("this") private int value;
+    @GuardedBy("this")
+    private int value;
 
     public synchronized int get() {
         return value;

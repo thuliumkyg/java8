@@ -1,7 +1,5 @@
 package com.java8.javassist;/**
- *
- *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/13 20:05
  */
 
@@ -15,7 +13,7 @@ import java.util.Arrays;
 /**
  *新增一个方法
  *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/13 20:05
  */
 @Slf4j
@@ -75,7 +73,7 @@ public class JavasistTest2 {
 
 
         //写入本地
-        ctClass.writeFile( "./src");
+        ctClass.writeFile("./src");
     }
 
 

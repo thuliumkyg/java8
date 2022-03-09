@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 线程池接口的默认实现
+ *
  * @author bingshan
  * @date 2021/10/23 13:37
  */
@@ -101,7 +102,7 @@ public class DefaultThreaPool<Job extends Runnable> implements ThreadPool<Job> {
     //工作者，负责消费任务
     class Worker implements Runnable {
         //是否工作
-        private volatile boolean running  = true;
+        private volatile boolean running = true;
 
         @Override
         public void run() {

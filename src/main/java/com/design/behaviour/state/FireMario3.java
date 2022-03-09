@@ -1,10 +1,13 @@
 package com.design.behaviour.state;
 
-public class FireMario3 implements IMario3{
+public class FireMario3 implements IMario3 {
 
     private static final FireMario3 instance = new FireMario3();
 
-    private FireMario3() {};
+    private FireMario3() {
+    }
+
+    ;
 
     public static FireMario3 getInstance() {
         return instance;

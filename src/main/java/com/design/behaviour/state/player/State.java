@@ -2,6 +2,7 @@ package com.design.behaviour.state.player;
 
 /**
  * 通用状态接口
+ *
  * @author bingshan
  * @date 2021/10/17 23:29
  */
@@ -17,7 +18,10 @@ public abstract class State {
     }
 
     public abstract String onLock();
+
     public abstract String onPlay();
+
     public abstract String onNext();
+
     public abstract String onPrevious();
 }

@@ -9,6 +9,7 @@ public class FutureTaskTest {
 
     /**
      * 当一个线程需要等待另一个线程把某个任务执行完成后它才能继续执行, 可以使用FutureTask
+     *
      * @param args
      */
     public static void main(String[] args) {

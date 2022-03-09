@@ -14,5 +14,5 @@ import java.lang.annotation.Target;
 @Target({TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MyAnnotations {
-   MyAnnotation[] value();
+    MyAnnotation[] value();
 }

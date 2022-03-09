@@ -17,7 +17,7 @@ import java.util.List;
  */
 
 @NotThreadSafe
-class BadListHelper <E> {
+class BadListHelper<E> {
     public List<E> list = Collections.synchronizedList(new ArrayList<E>());
 
     public synchronized boolean putIfAbsent(E x) {
@@ -29,7 +29,7 @@ class BadListHelper <E> {
 }
 
 @ThreadSafe
-class GoodListHelper <E> {
+class GoodListHelper<E> {
     public List<E> list = Collections.synchronizedList(new ArrayList<E>());
 
     public boolean putIfAbsent(E x) {

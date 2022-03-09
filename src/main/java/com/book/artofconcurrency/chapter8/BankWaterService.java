@@ -7,14 +7,14 @@ import java.util.concurrent.*;
 /**
  * 银行流水处理服务
  */
-public class BankWaterService implements Runnable{
+public class BankWaterService implements Runnable {
 
 
     /**
      * CyclicBarrier可以用于多线程计算数据,最后合并计算结果的场景
-     *     例如:一个Excel保存了用户所有银行流水,每个Sheet保存了一个账户近一年的每笔流水,
-     *     现在需要统计用户的日均银行流水,先用多线程处理每个sheet里的银行流水,
-     *     最后,在用barrierAction计算整个Excel的日均银行流水.
+     * 例如:一个Excel保存了用户所有银行流水,每个Sheet保存了一个账户近一年的每笔流水,
+     * 现在需要统计用户的日均银行流水,先用多线程处理每个sheet里的银行流水,
+     * 最后,在用barrierAction计算整个Excel的日均银行流水.
      */
 
     //创建4个屏障, 处理完子后执行当前类的run方法

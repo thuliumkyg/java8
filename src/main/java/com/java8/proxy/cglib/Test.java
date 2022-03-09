@@ -4,9 +4,7 @@ import net.sf.cglib.core.DebuggingClassWriter;
 import net.sf.cglib.proxy.Enhancer;
 
 /**
- *
- *
- * @author  bingshan
+ * @author bingshan
  * @date 2021/12/21 16:27
  */
 public class Test {
@@ -29,7 +27,6 @@ public class Test {
         Programmer proxy = (Programmer) enhancer.create();
         System.out.println("-------");
         proxy.code();
-
 
 
     }

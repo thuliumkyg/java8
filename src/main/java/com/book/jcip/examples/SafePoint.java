@@ -10,7 +10,8 @@ import com.book.jcip.annotations.ThreadSafe;
  */
 @ThreadSafe
 public class SafePoint {
-    @GuardedBy("this") private int x, y;
+    @GuardedBy("this")
+    private int x, y;
 
     private SafePoint(int[] a) {
         this(a[0], a[1]);
