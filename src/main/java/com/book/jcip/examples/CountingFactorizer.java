@@ -2,7 +2,10 @@ package com.book.jcip.examples;
 
 import com.book.jcip.annotations.ThreadSafe;
 
-import javax.servlet.*;
+import javax.servlet.GenericServlet;
+import javax.servlet.Servlet;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import java.math.BigInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
