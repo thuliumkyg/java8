@@ -4,7 +4,9 @@ import javassist.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  *
@@ -55,6 +57,15 @@ public class GetStartedWithJavassist {
         pool.makeClass("com.java8.javassist.clazz.Prune");
         CtClass prune = pool.get("com.java8.javassist.clazz.Prune");
         prune.stopPruning(true);
+
+        //类搜索路径
+        pool.insertClassPath("D:\\project\\demo\\java8\\src\\main\\java\\com\\java8\\javassist");
+        CtClass hello = pool.get("Hello");
+        InputStream is = new FileInputStream(
+                "D:\\project\\demo\\java8\\src\\main\\java\\com\\java8\\javassist\\Student.class");
+        pool.makeClass(is);
+        CtClass student = pool.get("Student");
+
 
     }
 
