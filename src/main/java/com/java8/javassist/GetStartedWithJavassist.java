@@ -38,8 +38,23 @@ public class GetStartedWithJavassist {
         byte[] b = rectangle.toBytecode();
         LOG.info("Rectangle字节码: "+ b.toString());
 
+        //冻结类
+        //如果CtClass对象被writeFile(),toClass()或者toBytecode()转换成了类对象，Javassist将会冻结此CtClass对象。
+        // 任何对此对象的后续更改都是不允许的。之所以这样做，主要是因为此类已经被JVM加载，
+        // 由于JVM本身不支持类的重复加载操作，所以不允许更改。
         rectangle.writeFile("./src/main/java/");
-
+        //代码进行解冻
+        rectangle.defrost();
+        //如果ClassPool.doPruning被设置为true，那么Javassist将会把已冻结的CtClass对象中的数据结构进行精简，
+        // 此举主要是为了防止过多的内存消耗。而精简掉的部分，都是一些不必要的属性(attriute_info结构)。
+        // 因此，当一个CtClass对象被精简之后，方法是无法被访问和调用的，但是方法名称，签名，注解可以被访问。
+        // 被精简过的CtClass对象不能被再次解冻。
+        // 需要注意的是，ClassPool.doPruning的默认值为false。
+        //
+        //要禁止修剪特定的CtClass, stopPruning()必须提前在该对象上调用
+        pool.makeClass("com.java8.javassist.clazz.Prune");
+        CtClass prune = pool.get("com.java8.javassist.clazz.Prune");
+        prune.stopPruning(true);
 
     }
 
