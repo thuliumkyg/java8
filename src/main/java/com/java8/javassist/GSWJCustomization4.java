@@ -23,6 +23,7 @@ public class GSWJCustomization4 {
         CtMethod m = cc.getDeclaredMethod("move");
         //目标方法的参数  $0, $1, $2, ..  $0等价于this关键字
         //insertBefore方法中的代码段是被大括号{}包围的，此方法只接受一个被大括号包围的代码段入参。
+        //$$是被逗号分隔的所有参数列表的缩写
         m.insertBefore("{ System.out.println($1); System.out.println($2); }");
         cc.writeFile("./src/main/java/");
     }
