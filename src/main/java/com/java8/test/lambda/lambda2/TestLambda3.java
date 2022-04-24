@@ -11,19 +11,19 @@ import java.util.function.Supplier;
 import org.junit.Test;
 
 /*
- *  Java8 ���õ��Ĵ���ĺ���ʽ�ӿ�
- *  		Consumer<T> :�����ͽӿ�
+ *  Java8 ??????????????????
+ *  		Consumer<T> :????????
  *  					 void accept(T t);
- *  		Supplier<T> : �����ͽӿ�
- *  						T get����;
- *  		Function<T ,R> :�����ͽӿ�
- *  						R apply(T t����
- *  		Predicate<T> : �����ͽӿ�
+ *  		Supplier<T> : ????????
+ *  						T get????;
+ *  		Function<T ,R> :????????
+ *  						R apply(T t????
+ *  		Predicate<T> : ????????
  *  						boolean test(T t);
  *
  */
 public class TestLambda3 {
-    //Predicate<T> :�����ͺ���
+    //Predicate<T> :?????????
     @Test
     public void test4() {
         List<String> list = Arrays.asList("hello", "ajjjej", "ddf", "ss");
@@ -33,7 +33,7 @@ public class TestLambda3 {
         }
     }
 
-    //���� ָ���ַ�����ӵ�������
+    //???? ??????????????????
     public List<String> filterStr(List<String> list, Predicate<String> pre) {
         List<String> strList = new ArrayList<>();
         for (String str : list) {
@@ -45,7 +45,7 @@ public class TestLambda3 {
     }
 
 
-    //Function<T,R> �����ͽӿڣ�
+    //Function<T,R> ?????????
     @Test
     public void test3() {
         String newStr = strHandler("dsfje/t/t  ", (str) -> str.trim());
@@ -56,7 +56,7 @@ public class TestLambda3 {
         return fun.apply(str);
     }
 
-    //Supplier<T> �����ͽӿڣ�
+    //Supplier<T> ?????????
     @Test
     public void test2() {
         List<Integer> numList = getNumList(10, () -> (int) (Math.random() * 100));
@@ -66,7 +66,7 @@ public class TestLambda3 {
 
     }
 
-    //���󣺲���ָ�������������ŵ�������
+    //?????????????????????????????
     public List<Integer> getNumList(int num, Supplier<Integer> sup) {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < num; i++) {
@@ -77,10 +77,10 @@ public class TestLambda3 {
         return list;
     }
 
-    //Consumer<T> �����ͽӿ�:
+    //Consumer<T> ????????:
     @Test
     public void test1() {
-        happy(10000, (m) -> System.out.println("����:" + m));
+        happy(10000, (m) -> System.out.println("????:" + m));
     }
 
     public void happy(double money, Consumer<Double> con) {
