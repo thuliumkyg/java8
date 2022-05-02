@@ -1,13 +1,11 @@
 package com.java8.javassist;
 
-import com.java8.javassist.clazz.Author;
+import com.java8.javassist.java.Author;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Objects;
 
 import static javassist.CtClass.intType;
 
@@ -23,10 +21,13 @@ public class GSWJCustomization4 {
 
 
     public static void main(String[] args) throws Throwable {
+        //将CtClass.debugDump设置为目录名称之后，所有被Javassist生成或修改的类文件将会被保存到此目录中
+        CtClass.debugDump = "./dump";
+
         ClassPool pool = ClassPool.getDefault();
         //创建无成员方法   CtNewMethod附带的工厂方法创建，然后利用CtClass.addMethod()将其追加
-        //pool.makeClass("com.java8.javassist.clazz.Point");
-        CtClass cc = pool.get("com.java8.javassist.clazz.Point");
+        //pool.makeClass("com.java8.javassist.java.Point");
+        CtClass cc = pool.get("com.java8.javassist.java.Point");
         CtMethod m = cc.getDeclaredMethod("move");
         //目标方法的参数  $0, $1, $2, ..  $0等价于this关键字
         //insertBefore方法中的代码段是被大括号{}包围的，此方法只接受一个被大括号包围的代码段入参。
@@ -111,7 +112,7 @@ public class GSWJCustomization4 {
         //6 导入
         //所有的源码中的类名，必须是完整的（必须包含完整的包名），但是java.lang包例外
         //为了让编译器能够找到类名锁对应的包，可以通过调用ClassPool的importPackage方法来进行
-        pool.importPackage("java.awt");
+        pool.importPackage("com.java8.javassist.java");
         CtClass test = pool.makeClass("Test");
         CtField tF = CtField.make("public Point p;", test);
         test.addField(tF);
@@ -119,6 +120,18 @@ public class GSWJCustomization4 {
         //第二行代表引入java.awt包，那么第三行就不会抛出错误，因为编译器可以将Point类识别为java.awt.Point。
         //需要注意的是，importPckage方法不会影响到ClassPool中的get方法操作，只会影响到编译器的包导入操作。
         // get方法中的参数在任何情况下，必须是完整的，包含包路径的。
+
+        //7 限制
+
+        //7可变参数
+        //目前，Javassist无法直接支持可变参数。
+        //参数类型int...变成了int[]数组，Modifier.VARARGS被添加到了方法修改器中。
+        //为了能够在Javassist编译器中调用此方法，你需要这样来：
+        //1:  length(new int[] { 1, 2, 3 });
+        CtMethod argsM = CtMethod.make("public int length(int[] args) { return args.length; } ", cc);
+        argsM.setModifiers(argsM.getModifiers() | Modifier.VARARGS);
+        cc.addMethod(argsM);
+
         
 
 

@@ -1,4 +1,4 @@
-package com.java8.javassist.clazz;
+package com.java8.javassist.java;
 /**
  *
  *

@@ -1,4 +1,5 @@
-package com.java8.javassist.clazz;
+package com.java8.javassist.java;
+
 /**
  *
  *
@@ -6,7 +7,7 @@ package com.java8.javassist.clazz;
  * @date 2022/3/16 20:45
  */
 @Author(name = "bingshan", year=2022)
-public class Point {
+public class Point1 {
     int x, y;
     void move(int dx, int dy) { x += dx; y += dy; }
 

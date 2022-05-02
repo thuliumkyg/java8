@@ -23,18 +23,18 @@ public class GetStartedWithJavassist {
          */
         ClassPool pool = ClassPool.getDefault();
         //创建无成员方法   CtNewMethod附带的工厂方法创建，然后利用CtClass.addMethod()将其追加
-        pool.makeClass("com.java8.javassist.clazz.Rectangle");
+        pool.makeClass("com.java8.javassist.java.Rectangle");
 
-        pool.makeClass("com.java8.javassist.clazz.Point");
-        CtClass point = pool.get("com.java8.javassist.clazz.Point");
+        pool.makeClass("com.java8.javassist.java.Point");
+        CtClass point = pool.get("com.java8.javassist.java.Point");
         CtConstructor m = CtNewConstructor.make(
                                             "Point() {}", point);
         point.addConstructor(m);
         //直接加载CtClass
-        Class pointClazz = point.toClass();
-        LOG.info("Rectangle class: " + pointClazz );
+        Class pointjava = point.toClass();
+        LOG.info("Rectangle class: " + pointjava );
 
-        CtClass rectangle = pool.get("com.java8.javassist.clazz.Rectangle");
+        CtClass rectangle = pool.get("com.java8.javassist.java.Rectangle");
         rectangle.setSuperclass(point);
         //直接获取修改的字节码
         byte[] b = rectangle.toBytecode();
@@ -54,8 +54,8 @@ public class GetStartedWithJavassist {
         // 需要注意的是，ClassPool.doPruning的默认值为false。
         //
         //要禁止修剪特定的CtClass, stopPruning()必须提前在该对象上调用
-        pool.makeClass("com.java8.javassist.clazz.Prune");
-        CtClass prune = pool.get("com.java8.javassist.clazz.Prune");
+        pool.makeClass("com.java8.javassist.java.Prune");
+        CtClass prune = pool.get("com.java8.javassist.java.Prune");
         prune.stopPruning(true);
 
         //类搜索路径
