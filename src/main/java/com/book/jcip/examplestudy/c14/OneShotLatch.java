@@ -1,7 +1,6 @@
 package com.book.jcip.examplestudy.c14;
 
 import com.book.jcip.annotations.ThreadSafe;
-import com.sun.corba.se.impl.orbutil.concurrent.Sync;
 
 import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
 

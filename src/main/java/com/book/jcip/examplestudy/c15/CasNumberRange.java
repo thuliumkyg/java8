@@ -1,8 +1,6 @@
 package com.book.jcip.examplestudy.c15;
 
 
-import com.sun.xml.internal.ws.api.WSService;
-
 import javax.persistence.criteria.CriteriaBuilder;
 import java.util.concurrent.atomic.AtomicReference;
 

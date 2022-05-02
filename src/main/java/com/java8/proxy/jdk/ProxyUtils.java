@@ -1,5 +1,6 @@
 package com.java8.proxy.jdk;
 
+
 import sun.misc.ProxyGenerator;
 
 import java.io.FileNotFoundException;
