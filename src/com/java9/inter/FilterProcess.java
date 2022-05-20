@@ -1,4 +1,4 @@
-package src.com.java9;
+package src.com.java9.inter;
 
 /**
  * @author bingshan
