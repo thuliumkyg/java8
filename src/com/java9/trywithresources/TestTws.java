@@ -1,4 +1,4 @@
-package src.com.java9.trywithresources;
+package com.java9.trywithresources;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package src.com.java9.stream;
+package com.java9.stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;

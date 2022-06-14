@@ -1,4 +1,4 @@
-package src.com.java9;
+package com.java9;
 
 import org.junit.Test;
 

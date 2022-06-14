@@ -1,6 +1,5 @@
-package src.com.java11;
+package com.java11;
 
-import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

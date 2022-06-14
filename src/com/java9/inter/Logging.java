@@ -1,4 +1,4 @@
-package src.com.java9.inter;
+package com.java9.inter;
 
 public interface Logging {
     /**

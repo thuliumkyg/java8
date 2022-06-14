@@ -1,4 +1,4 @@
-package src.com.java9.process;
+package com.java9.process;
 
 import java.io.IOException;
 import java.time.ZoneId;
